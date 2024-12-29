@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:background="#FFFF99">
+
+    <!--
+    [Starting] Egg Temperature
+     Choice of: actual temperature (C), or selection (room temperature / from the 'fridge etc)
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/TextAmbientPressure"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="6dp"
+            android:background="@color/pureBrilliantWhite"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textSize="16dp"
+            android:textColor="@color/darkGrey"/>
+
+        <TextView
+            android:id="@+id/TextCalculatedAltitude"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="150dp"
+            android:background="@color/pureBrilliantWhite"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/TextAmbientTemperature"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/pureBrilliantWhite"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/LabelEggTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/String_LabelEggTemperature"
+            android:tooltipText="@string/String_LabelEggTemperatureToolTip"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp" />
+
+        <Spinner
+            android:id="@+id/SpinnerInitialEggTemperature"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LabelEggTemperature"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp" />
+
+        <!--
+        <TextView
+            android:id="@+id/LabelEggTemperatureDefined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/SpinnerEggTemperature"
+            android:text="@string/String_LabelEggTemperatureDefined"
+            android:tooltipText="@string/String_LabelEggTemperatureToolTip"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"/>
+            -->
+
+        <EditText
+            android:id="@+id/EditTextEggTemperatureDefined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/LabelEggTemperature"
+            android:layout_alignTop="@id/LabelEggTemperature"
+            android:text="@string/String_GeneralValuePrompt"
+            android:tooltipText="@string/String_LabelEggTemperatureToolTip"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp"
+            android:layout_marginTop="0dp"
+            android:inputType="textPersonName" />
+
+            <!--
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/SpinnerInitialEggTemperature"
+            -->
+
+    </RelativeLayout>
+
+    <!--
+    Egg size
+    Choice of: actual mass (g), or selection :-
+    (https://www.egginfo.co.uk/egg-facts-and-figures/industry-information/egg-sizes))
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/LabelEggSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/String_LabelEggSize" />
+
+        <Spinner
+            android:id="@+id/SpinnerEggSize"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LabelEggSize"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:entries="@array/eggSize" />
+
+        <EditText
+            android:id="@+id/EditTextEggSizeDefined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/SpinnerEggSize"
+            android:text="@string/String_LabelEggSizeDefined"
+            android:tooltipText="@string/String_LabelEggTemperatureToolTip"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:inputType="textPersonName" />
+
+    </RelativeLayout>
+
+    <!--
+    Final egg cook state
+    Choice of: actual final temperature (C), or selection (runny, soft, hard etc)
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/LabelEggCookState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/String_LabelEggCookState" />
+
+        <Spinner
+            android:id="@+id/SpinnerEggCookState"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LabelEggCookState"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:entries="@array/eggCookState" />
+
+        <EditText
+            android:id="@+id/EditTextEggCookStateDefined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SpinnerEggCookState"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:inputType="textPersonName"
+            android:text="@string/String_LabelEggSCookStateDefined"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp"
+            android:tooltipText="@string/String_LabelEggTemperatureToolTip" />
+
+    </RelativeLayout>
+
+    <!--
+    Deal with ambient barometric pressure
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/LabelBarometricPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/String_LabelBarometricPressure" />
+
+        <Spinner
+            android:id="@+id/SpinnerBarometricPressure"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/LabelBarometricPressure"
+            android:entries="@array/barometricPressure" />
+
+        <EditText
+            android:id="@+id/EditTextBarometricPressureDefined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SpinnerBarometricPressure"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:inputType="textPersonName"
+            android:text="@string/String_LabelEggSCookStateDefined"
+            android:textColor="@color/darkGrey"
+            android:textSize="16dp"
+            android:tooltipText="@string/String_LabelEggTemperatureToolTip" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/ButtonGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="OnGo"
+            android:padding="4dp"
+            android:text="@string/String_ButtonGo" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- static strings... -->
+    <string name="app_name">Eggster</string>
+    <string name="String_ButtonGo">Cook my Egg!</string>
+    <string name="String_LabelEggTemperature">Initial Egg Temperature : </string>
+    <string name="String_LabelEggTemperatureDefined">Enter Initial Egg Temperature Here...</string>
+    <string name="String_LabelEggSizeDefined">Enter Egg Mass (g) Here...</string>
+    <string name="String_LabelEggSCookStateDefined">Enter Egg Desired Temperatre (C) Here...</string>
+    <string name="String_LabelEggTemperatureToolTip">Select from the list or enter the temperature</string>
+    <string name="String_LabelEggSize">Egg Size / Mass : </string>
+    <string name="String_LabelEggCookState">Desired Cook State :</string>
+    <string name="String_LabelBarometricPressure">Ambient Barometric Pressure :</string>
+    <string name="String_GeneralValuePrompt">Enter value...</string>
+
+    <!-- string arrays for drop-downs... -->
+    <!-- These are staic assets; there is no need to code these dynamically -->
+
+    <!-- Initial Egg Temperature... -->
+    <string-array name="initialEggTemperature">
+        <item>Ambient (Detect)</item>
+        <item>Ambient (Default)</item>
+        <item>Chilled (Detect)</item>
+        <item>Chilled (Default)</item>
+        <item>Enter Temperature (C)...</item>
+    </string-array>
+
+    <!-- Egg Size (we'll add a link to a reference table)... -->
+    <!-- https://www.egginfo.co.uk/egg-facts-and-figures/industry-information/egg-sizes -->
+    <string-array name="eggSize">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Very Large</item>
+        <item>Enter Mass (g)...</item>
+    </string-array>
+
+    <!-- Egg Cook State... -->
+    <string-array name="eggCookState">
+        <item>Runny Dipper</item>   <!--  -->
+        <item>Dipper</item>         <!--  -->
+        <item>Soft Boiled</item>    <!--  -->
+        <item>Firm Boiled</item>    <!--  -->
+        <item>Hard Boiled</item>    <!--  -->
+        <item>C2F</item>            <!--  -->
+    </string-array>
+
+    <!-- Barometric Pressure... -->
+    <string-array name="barometricPressure">
+        <item>Detect</item>   <!--  -->
+        <item>Enter Pressure (mBar)</item>         <!--  -->
+
+    </string-array>
+
+</resources>
